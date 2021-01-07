@@ -30,10 +30,17 @@ O ideal é criar um ***alias*** específico no servidor que direcione diretament
 <?php
 
 namespace src\models;
-use \core\Model;
+use core\Model;
 
 class Usuario extends Model
 {
 
 }
 ```
+
+## Biblioteca utilizada para QueryBuilder
+
+### HYDRAHON
+
+**Documentação Completa:**
+[Hydrahon](https://clancats.io/hydrahon/v1.1.6/)
