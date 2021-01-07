@@ -2,7 +2,7 @@
 
 namespace core;
 
-use \src\Config;
+use src\Config;
 
 class Controller
 {

@@ -2,9 +2,9 @@
 
 namespace core;
 
-use \core\Database;
-use \ClanCats\Hydrahon\Builder;
-use \ClanCats\Hydrahon\Query\Sql\FetchableInterface;
+use core\Database;
+use ClanCats\Hydrahon\Builder;
+use ClanCats\Hydrahon\Query\Sql\FetchableInterface;
 
 class Model
 {

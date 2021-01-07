@@ -2,7 +2,7 @@
 
 namespace core;
 
-use \core\RouterBase;
+use core\RouterBase;
 
 class Router extends RouterBase
 {

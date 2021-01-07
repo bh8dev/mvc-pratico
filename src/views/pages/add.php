@@ -2,7 +2,7 @@
 
 <h2>Adicionar novo Usuário</h2>
 
-<form action="<?=$base;?>/novo" method="post">
+<form action="<?= $base; ?>/novo/" method="post">
 
     <label for="name">Nome:</label>
     <input type="text" name="name" id="name" autofocus required>

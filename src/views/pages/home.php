@@ -1,6 +1,6 @@
 <?php $render('header'); ?>
 
-<a href="<?=$base;?>/novo/">Novo Usuário</a>
+<a href="<?= $base; ?>/novo/">Novo Usuário</a>
 
 <table border="1" style="width: 100%; text-align: center;">
     <thead>
