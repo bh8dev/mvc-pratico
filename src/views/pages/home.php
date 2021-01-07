@@ -22,12 +22,12 @@
     <tbody>
         <?php foreach ($usuarios as $usuario): ?>
         <tr>
-            <td><?=$usuario['id_usuario'];?></td>
+            <td><?=$usuario['id'];?></td>
             <td><?=$usuario['nome'];?></td>
             <td><?=$usuario['email'];?></td>
             <td>
-                <a href="<?= $base; ?>/usuario/<?= $usuario['id_usuario']; ?>/editar/">[ Editar ]</a>
-                <a href="<?= $base; ?>/usuario/<?= $usuario['id_usuario']; ?>/excluir/">[ Excluir ]</a>
+                <a href="<?= $base; ?>/usuario/<?= $usuario['id']; ?>/editar/">[ Editar ]</a>
+                <a href="<?= $base; ?>/usuario/<?= $usuario['id']; ?>/excluir/">[ Excluir ]</a>
             </td>
         </tr>
         <?php endforeach; ?>

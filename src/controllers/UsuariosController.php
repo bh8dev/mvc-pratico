@@ -19,7 +19,9 @@ class UsuariosController extends Controller
 
         if($name && $email)
         {
-            $data    = Usuario::select()->where('email', $email)->execute();
+            $data    = Usuario::select()
+                ->where('email', $email)
+            ->execute();
 
             if(count($data) === 0)
             {
@@ -37,11 +39,37 @@ class UsuariosController extends Controller
 
     public function edit(array $parameters = [])
     {
+        $usuario    = Usuario::select()->find($parameters['id']);
 
+        $this->render('edit', [
+            'usuario' => $usuario
+        ]);
+    }
+    public function editAction(array $parameters = [])
+    {
+        $name     = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+        $email    = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+
+        if($name && $email)
+        {
+            Usuario::update()
+                ->set('nome', $name)
+                ->set('email', $email)
+                ->where('id', $parameters['id'])
+            ->execute();
+
+            $this->redirect('/');
+        }
+
+        $this->redirect("/usuario/{$parameters['id']}/editar");
     }
 
     public function del(array $parameters = [])
     {
         
+    }
+    public function delAction()
+    {
+
     }
 }
