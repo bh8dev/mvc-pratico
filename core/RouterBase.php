@@ -1,11 +1,14 @@
 <?php
+
 namespace core;
 
 use \src\Config;
 
-class RouterBase {
+class RouterBase
+{
 
-    public function run($routes) {
+    public function run($routes)
+    {
         $method = Request::getMethod();
         $url = Request::getUrl();
 

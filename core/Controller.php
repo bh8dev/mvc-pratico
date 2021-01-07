@@ -1,16 +1,20 @@
 <?php
+
 namespace core;
 
 use \src\Config;
 
-class Controller {
+class Controller
+{
 
-    protected function redirect($url) {
+    protected function redirect($url)
+    {
         header("Location: ".$this->getBaseUrl().$url);
         exit;
     }
 
-    private function getBaseUrl() {
+    private function getBaseUrl()
+    {
         $base = (isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on') ? 'https://' : 'http://';
         $base .= $_SERVER['SERVER_NAME'];
         if($_SERVER['SERVER_PORT'] != '80') {
@@ -21,7 +25,8 @@ class Controller {
         return $base;
     }
 
-    private function _render($folder, $viewName, $viewData = []) {
+    private function _render($folder, $viewName, $viewData = [])
+    {
         if(file_exists('../src/views/'.$folder.'/'.$viewName.'.php')) {
             extract($viewData);
             $render = fn($vN, $vD = []) => $this->renderPartial($vN, $vD);
@@ -30,11 +35,13 @@ class Controller {
         }
     }
 
-    private function renderPartial($viewName, $viewData = []) {
+    private function renderPartial($viewName, $viewData = [])
+    {
         $this->_render('partials', $viewName, $viewData);
     }
 
-    public function render($viewName, $viewData = []) {
+    public function render($viewName, $viewData = [])
+    {
         $this->_render('pages', $viewName, $viewData);
     }
 
