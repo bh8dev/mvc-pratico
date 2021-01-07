@@ -34,4 +34,14 @@ class UsuariosController extends Controller
         
         $this->redirect('/novo');
     }
+
+    public function edit(array $parameters = [])
+    {
+
+    }
+
+    public function del(array $parameters = [])
+    {
+        
+    }
 }
