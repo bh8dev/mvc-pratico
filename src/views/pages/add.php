@@ -1,16 +1,20 @@
 <?php $render('header'); ?>
 
-<h2>Adicionar novo Usuário</h2>
+<section class="user-heading" style="margin-bottom: 10px;">
+    <h2>Adicionar novo Usuário</h2>
+</section>
 
-<form action="<?=$base;?>/novo/" method="post">
+<main style="text-align: center;">
+    <form class="form-user" action="<?=$base;?>/novo/" method="post">
 
-    <label for="name">Nome:</label>
-    <input type="text" name="name" id="name" autofocus required>
-    
-    <label for="email">E-mail</label>
-    <input type="email" name="email" id="email" required>
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" autofocus required>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" required>
 
-    <button type="submit">Adicionar</button>
-</form>
+        <button class="btn" type="submit">Adicionar</button>
+    </form>
+</main>
 
 <?php $render('footer'); ?>

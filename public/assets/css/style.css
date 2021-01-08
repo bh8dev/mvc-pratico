@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+.clear-btn a
+{
+    text-decoration: none;
+    color: #edf6f9;
+    background-color: #555b6e;
+    display: inline-block;
+    padding: 12px 12px;
+    border-radius: 10px;
+}
+
+.clear-btn a:hover
+{
+    background-color: #4361ee;
+}
+
+#users
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#users td, #users th
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#users tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+#users tr:hover
+{
+    background-color: #ddd;
+}
+
+#users th
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #555b6e;
+    color: white;
+}
+
+#main-header
+{
+    color: #560bad;
+}
+
+.github
+{
+    text-align: center;
+}
+
+.github p
+{
+    color: #560bad;
+}
+
+.github a
+{
+    text-decoration: none;
+    color: #edf6f9;
+    background-color: #6a00f4;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 4px 4px;
+}
+
+.github a:hover
+{
+    color: #edf6f9;
+    background-color: #3c096c;
+}
+
+.user-heading
+{
+    text-align: center;
+}
+
+.form-user input
+{
+    border: 2px solid;
+    border-color: blueviolet;
+    border-radius: 8px;
+    outline: none;
+}
+
+.btn
+{
+    background-color: blueviolet;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}

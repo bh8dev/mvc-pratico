@@ -1,11 +1,11 @@
 <?php $render('header'); ?>
 
-<section style="margin-bottom: 10px;">
+<section class="clear-btn" style="margin-bottom: 10px;">
     <a href="<?= $base; ?>/novo/">Novo Usuário</a>
 </section>
 
-<main>
-    <table border="1" style="width: 100%; text-align: center;">
+<main class="clear-btn" style="text-align: center;">
+    <table border="1" id="users">
         <thead>
             <tr>
                 <th>ID</th>
@@ -29,8 +29,8 @@
                 <td><?=$usuario['nome'];?></td>
                 <td><?=$usuario['email'];?></td>
                 <td>
-                    <a href="<?= $base; ?>/usuario/<?= $usuario['id']; ?>/editar/">[ Editar ]</a>
-                    <a href="<?= $base; ?>/usuario/<?= $usuario['id']; ?>/excluir/" onclick="return confirm('Deseja realmente excluir este usuário?');">[ Excluir ]</a>
+                    <a href="<?= $base; ?>/usuario/<?= $usuario['id']; ?>/editar/">Editar</a>
+                    <a href="<?= $base; ?>/usuario/<?= $usuario['id']; ?>/excluir/" onclick="return confirm('Deseja realmente excluir este usuário?');">Excluir</a>
                 </td>
             </tr>
             <?php endforeach; ?>
