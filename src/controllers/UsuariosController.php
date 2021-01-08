@@ -66,10 +66,10 @@ class UsuariosController extends Controller
 
     public function del(array $parameters = [])
     {
-        
-    }
-    public function delAction()
-    {
+        Usuario::delete()
+            ->where('id', $parameters['id'])
+        ->execute();
 
+        $this->redirect('/');
     }
 }
